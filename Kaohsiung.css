@@ -1,0 +1,325 @@
+* {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 整個網頁的寬度  背景顏色  字體置中 */
+.container {
+    background: #eee;
+    width: 100%;
+}
+
+/* header 開始 */
+/* 最上面的圖片部分 直接設定背景圖片*/
+.header {
+    background-image: url(/BEGINER_HW/assets/the-urban-landscape-1698285.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 380px;
+    margin: auto;
+
+    width: 1024px;
+}
+
+/* 圖片上的標題及下拉選單 單純定位用*/
+.header-info {
+    width: 100%;
+    height: 95%;
+    /* 給標題和下拉選單定位用 */
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* 圖片上的標題 */
+.header-title {
+    color: #FFFFFF;
+    font-family: PingFangTC-Regular;
+    font-size: 40px;
+    letter-spacing: 3.89px;
+    height: 40px;
+    width: 265px;
+}
+
+/* 給選單箭頭定位用 */
+.header-select {
+    /* position: relative; */
+    width: 44.1%;
+    height: 48px;
+}
+
+/* 圖片上的下拉式選單 */
+.header-select select {
+    appearance: none;
+    background: url(/BEGINER_HW/assets/icons_down.png) rgba(255, 255, 255, 0.70) no-repeat 96%;
+    border: 3px solid #FFFFFF;
+    border-radius: 3px;
+    height: 100%;
+    width: 100%;
+    padding: 0 3%;
+    font-family: PingFangTC-Regular;
+    font-size: 18px;
+    color: #000000;
+    line-height: 21px;
+    outline: none;
+}
+
+/* header 結束 */
+
+/* content 開始 */
+/* 設定包住熱門行政區的區塊 */
+.content {
+    min-width: 1024px;
+    width: 100%;
+}
+
+/* 熱門行政區 */
+.popular {
+    width: 800px;
+    height: 112px;
+    background: #FFFFFF;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.20);
+    border-radius: 5px;
+    margin: -28px auto 49px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* 熱門行政區  五個字 */
+.administrative-district {
+    width: 91px;
+    height: 18px;
+    font-family: AppleSystemUIFont;
+    font-size: 18px;
+    color: #000000;
+    margin-left: 2.5%;
+}
+
+/* 包住四個行政區的框 */
+.district-box {
+    width: 725.6px;
+    display: flex;
+    /* flex四個方塊 */
+    justify-content: space-evenly;
+}
+
+/* 熱門行政區的四個方塊 */
+.the-most-popular {
+    width: 130px;
+    height: 42px;
+    border-radius: 5px;
+    font-family: PingFangTC-Regular;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-align: center;
+    align-items: center;
+    line-height: 42px;
+}
+
+.first-pop {
+    background: #8A82CC;
+}
+
+.sec-pop {
+    background: #FFA782;
+}
+
+.third-pop {
+    background: #F5D005;
+}
+
+.four-pop {
+    background: #559AC8;
+}
+
+/* 中間有箭頭的虛線 */
+.dashed-line {
+    height: 0.1px;
+    width: 100%;
+    border: 1px dashed #559AC8;
+    /* position: relative;    */
+}
+
+/* 需線上的箭頭 */
+.dashed-line p {
+    width: 24px;
+    height: 24px;
+    background-color: #eee;
+    border: 2px solid #559AC8;
+    border-radius: 100%;
+    margin: auto;
+    margin-top: -15px;
+    position: relative;
+}
+
+.dashed-line p::after {
+    content: '';
+    /* display: inline-block; */
+    width: 0px;
+    height: 0px;
+    border: 8px solid transparent;
+    border-top-color: #559ACB;
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+/* 選到的區域名字 */
+.area {
+    width: 1024px;
+    height: 120px;
+    margin: auto;
+    text-align: center;
+    line-height: 120px;
+}
+
+.area span {
+    font-family: SFNSDisplay;
+    font-size: 36px;
+    color: #8A82CC;
+    margin: auto;
+}
+
+/* 陳列出來的景點 */
+.items {
+    width: 944px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: 464px;
+    height: 273px;
+    margin-bottom: 40px;
+}
+
+/* item上半部圖片及地區名字及地點 */
+.item-top {
+    width: 464px;
+    height: 155px;
+    /* background-color: #ddd; */
+    display: flex;
+    align-items: flex-end;
+}
+
+.item-top p {
+    vertical-align: bottom;
+    width: 90%;
+    height: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.item-top p span:nth-child(1) {
+    font-family: SFNSDisplay;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.item-top p span:nth-child(2) {
+    font-family: SFNSDisplay;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+/* item下半部詳細資訊 */
+.item-bottom {
+    width: 464px;
+    height: 118px;
+    background: #FFFFFF;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.20);
+    padding: 15px 30px 15px 30px;
+    position: relative;
+    /* 給費用定位用 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.location-info {
+    font-family: AppleSystemUIFont;
+    font-size: 16px;
+    color: #000000;
+    display: flex;
+}
+
+.location-info:nth-child(1) img {
+    width: 18px;
+    height: 18px;
+}
+
+.location-info:nth-child(2) img {
+    width: 16px;
+    height: 20px;
+}
+
+.location-info:nth-child(3) img {
+    width: 12px;
+    height: 20px;
+    margin-left: 2px;
+}
+
+.location-info:nth-child(4) img {
+    width: 20px;
+    height: 20px;
+}
+
+.location-info span {
+    display: inline-block;
+    padding-left: 7px;
+    vertical-align: top;
+}
+
+.address span {
+    padding-left: 12px;
+}
+
+.fee {
+    position: absolute;
+    left: 75%;
+    bottom: 15px;
+}
+
+/* content 結束 */
+
+/* footer 開始 */
+.footer {
+    width: 100%;
+    height: 90px;
+    background: #559AC8;
+}
+
+.footer p {
+    width: 1024px;
+    height: 90px;
+    background: #559AC8;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.footer p span{
+    font-family: AppleSystemUIFont;
+    font-size: 14px;
+}
+.footer p span:nth-child(1) {
+    color: #fff;
+}
+.footer p span:nth-child(2) {
+    color: #FFD366;
+}
+
+/* footer 結束 */
